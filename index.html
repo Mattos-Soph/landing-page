@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRISMA Detox Financeiro | Reabilitação orçamentária sem julgamento moral</title>
+  
+  <!-- Favicon PRISMA -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#080d19',
+            cardBg: '#0f172a',
+            emeraldCustom: '#10b981',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #070c18;
+      color: #f1f5f9;
+    }
+    .custom-gradient-text {
+      background: linear-gradient(135deg, #34d399 0%, #10b981 45%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+    }
+    input[type=range]::-webkit-slider-thumb {
+      background-color: #10b981;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-appearance: none;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- Top Notification Bar -->
+  <header class="sticky top-0 z-50 bg-[#090f1d]/90 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+          <i class="fa-solid fa-shapes text-sm"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-base tracking-tight text-white">PRISMA</span>
+            <span class="text-[10px] font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-800/60 px-2 py-0.5 rounded-full uppercase tracking-wider">
+              Detox Financeiro
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-400 hidden sm:block">Organize suas contas e recupere o controle do seu salário</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center space-x-4">
+        <a href="#simulador" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+          <i class="fa-solid fa-calculator text-emerald-400"></i> Simular Quitação
+        </a>
+        <a href="#captura" class="text-xs sm:text-sm font-bold bg-[#10b981] hover:bg-emerald-400 text-slate-950 px-4 py-2 rounded-xl transition-all shadow-md shadow-emerald-500/25 flex items-center gap-1.5">
+          <span>Acesso Gratuito</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Notice Ribbon -->
+  <div class="bg-[#071912] border-b border-emerald-900/50 text-emerald-300 text-xs sm:text-sm py-2.5 px-4 text-center font-medium">
+    <div class="max-w-4xl mx-auto flex items-center justify-center gap-2">
+      <i class="fa-regular fa-lightbulb text-emerald-400 text-sm"></i>
+      <span>As plataformas de aposta fecharam, mas os boletos continuam chegando. Veja como organizar suas dívidas sem complicação.</span>
+    </div>
+  </div>
+
+  <main class="space-y-24 pb-20">
+
+    <!-- HERO SECTION -->
+    <section class="pt-14 pb-12 px-4 sm:px-6 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        
+        <!-- Trust badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/50 border border-emerald-800/40 text-xs sm:text-sm text-emerald-300 font-semibold">
+          <i class="fa-solid fa-lock text-xs sm:text-sm text-emerald-400"></i>
+          <span>100% Privado • Método Prático • Sem Julgamentos</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          As apostas saíram do ar.<br>
+          <span class="custom-gradient-text">
+            O rombo no orçamento ficou.
+          </span><br>
+          É hora de retomar o controle.
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-200 max-w-3xl mx-auto leading-relaxed font-normal">
+          Organize cartões estourados, faturas acumuladas e empréstimos pessoais de forma simples. Montamos um plano visual para você quitar conta por conta e colocar seu orçamento em dia.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <a href="#captura" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl font-bold text-sm sm:text-base bg-[#10b981] hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition-all cursor-pointer">
+            <span>Quero Testar Gratuitamente</span>
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+          <a href="#simulador" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl font-semibold text-sm sm:text-base bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 transition-all cursor-pointer">
+            <i class="fa-solid fa-calculator text-slate-400 text-sm"></i>
+            <span>Simular Minha Quitação</span>
+          </a>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-left">
+          <div class="p-4 rounded-2xl bg-[#0b1324] border border-slate-800 space-y-1">
+            <div class="text-emerald-400 font-black text-2xl sm:text-3xl">0%</div>
+            <div class="text-slate-300 text-xs sm:text-sm font-medium">Julgamento moral ou exposição</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#0b1324] border border-slate-800 space-y-1">
+            <div class="text-emerald-400 font-black text-2xl sm:text-3xl">Passo 1</div>
+            <div class="text-slate-300 text-xs sm:text-sm font-medium">Eliminar a menor dívida primeiro</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#0b1324] border border-slate-800 space-y-1">
+            <div class="text-emerald-400 font-black text-2xl sm:text-3xl">+Fôlego</div>
+            <div class="text-slate-300 text-xs sm:text-sm font-medium">Salário livre dos juros rotativos</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SITUAÇÕES REAIS -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          Você se identifica com alguma dessas situações?
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">
+          Pesquisando com pessoas reais, vimos que o prejuízo raramente acontece de uma vez: ele acumula aos poucos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-[#0b1325] border border-slate-800/90 p-6 sm:p-7 rounded-2xl space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-red-950/40 border border-red-800/40 text-red-400 flex items-center justify-center text-lg">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white">Pequenos depósitos diários</h3>
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+              "Colocava R$ 20 ou R$ 30 sem perceber. Quando fechei a fatura no fim do mês, já tinha ido uma fatia enorme do meu salário."
+            </p>
+          </div>
+          <div class="text-xs sm:text-sm text-red-400 font-semibold flex items-center gap-2 pt-3.5 border-t border-slate-800/80">
+            <i class="fa-regular fa-circle-exclamation text-sm"></i> Gastos picados sem acompanhamento
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#0b1325] border border-slate-800/90 p-6 sm:p-7 rounded-2xl space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-amber-950/40 border border-amber-800/40 text-amber-400 flex items-center justify-center text-lg">
+              <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white">Tentar recuperar o prejuízo</h3>
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+              Depositar mais dinheiro na tentativa de reaver o que foi perdido, acabando por acumular mais faturas e juros no cartão de crédito.
+            </p>
+          </div>
+          <div class="text-xs sm:text-sm text-amber-400 font-semibold flex items-center gap-2 pt-3.5 border-t border-slate-800/80">
+            <i class="fa-regular fa-circle-exclamation text-sm"></i> Decisões no calor da emoção
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#0b1325] border border-slate-800/90 p-6 sm:p-7 rounded-2xl space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-purple-950/40 border border-purple-800/40 text-purple-400 flex items-center justify-center text-lg">
+              <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white">Empréstimos com amigos ou família</h3>
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+              Pedir dinheiro emprestado para conhecidos no aperto e hoje sentir a preocupação e o constrangimento de devolver o valor.
+            </p>
+          </div>
+          <div class="text-xs sm:text-sm text-purple-400 font-semibold flex items-center gap-2 pt-3.5 border-t border-slate-800/80">
+            <i class="fa-regular fa-circle-exclamation text-sm"></i> Compromissos pessoais pendentes
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SIMULADOR BOLA DE NEVE -->
+    <section id="simulador" class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="bg-[#0b1326] p-6 sm:p-9 md:p-10 rounded-3xl border border-slate-800 shadow-2xl relative">
+        
+        <div class="max-w-2xl space-y-2 mb-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 text-emerald-300 text-xs font-semibold tracking-wider border border-emerald-800/60 uppercase">
+            <i class="fa-solid fa-calculator text-xs"></i> SIMULADOR DE QUITAÇÃO
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            Monte seu Cenário Real de Quitação
+          </h2>
+          <p class="text-xs sm:text-sm md:text-base text-slate-300">
+            Adicione suas dívidas reais, defina quanto você pode destinar por mês e veja a ordem ideal em que cada pendência será eliminada.
+          </p>
+        </div>
+
+        <!-- Presets -->
+        <div class="mb-6 flex flex-wrap items-center gap-2.5 text-xs sm:text-sm">
+          <span class="text-slate-400 font-semibold">Exemplos práticos:</span>
+          <button type="button" onclick="loadSimulatorPreset('leve')" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors cursor-pointer">
+            Contas pequenas (R$ 650)
+          </button>
+          <button type="button" onclick="loadSimulatorPreset('medio')" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors cursor-pointer">
+            Cartões e Empréstimo (R$ 1.850)
+          </button>
+          <button type="button" onclick="loadSimulatorPreset('pesado')" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors cursor-pointer">
+            Endividamento Maior (R$ 4.600)
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          
+          <!-- Coluna 1: Entradas do Usuário (50% da largura) -->
+          <div class="lg:col-span-6 bg-[#080d19]/90 p-5 sm:p-7 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-5">
+            
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <div class="flex justify-between items-center text-xs sm:text-sm font-semibold text-slate-200">
+                  <span>Quanto você consegue destinar por mês?</span>
+                  <span class="text-base sm:text-lg font-extrabold text-emerald-400" id="displayBudgetValue">R$ 350 / mês</span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <input type="range" id="simMonthlyBudgetRange" min="50" max="2000" step="50" value="350" oninput="syncBudgetFromRange(this.value)" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                  <div class="relative w-32 shrink-0">
+                    <span class="absolute left-3 top-2.5 text-xs sm:text-sm text-slate-500 font-bold">R$</span>
+                    <input type="number" id="simMonthlyBudget" value="350" min="50" step="50" oninput="syncBudgetFromInput(this.value)" class="w-full pl-9 pr-2.5 py-1.5 bg-slate-950 border border-slate-800 rounded-xl text-white text-xs sm:text-sm font-bold focus:outline-none focus:border-emerald-500">
+                  </div>
+                </div>
+                <p class="text-xs text-slate-400">
+                  O valor que antes ia para depósitos agora servirá para recuperar sua tranquilidade.
+                </p>
+              </div>
+
+              <!-- Lista de dívidas -->
+              <div class="space-y-3 pt-3 border-t border-slate-800">
+                <div class="flex items-center justify-between text-xs sm:text-sm font-semibold">
+                  <span class="text-slate-200 flex items-center gap-1.5">
+                    <i class="fa-solid fa-list-check text-emerald-400"></i>
+                    <span>Suas dívidas cadastradas (<span id="debtsCount">3</span>):</span>
+                  </span>
+                  <span class="text-xs text-emerald-400 font-semibold">Da menor para a maior</span>
+                </div>
+
+                <div class="space-y-2 max-h-52 overflow-y-auto pr-1" id="debtsListContainer"></div>
+              </div>
+            </div>
+
+            <!-- Formulário para adicionar dívida -->
+            <form id="addDebtForm" onsubmit="handleAddDebt(event)" class="bg-slate-950/90 p-4 rounded-xl border border-slate-800 space-y-2.5 mt-auto">
+              <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block">
+                + Adicionar outra conta ou empréstimo
+              </span>
+              <div class="grid grid-cols-1 sm:grid-cols-12 gap-2.5">
+                <div class="sm:col-span-6">
+                  <label for="newDebtName" class="block text-[11px] font-semibold text-slate-400 mb-1">Nome da conta / dívida</label>
+                  <input type="text" id="newDebtName" placeholder="Ex: Cartão de crédito, Empréstimo..." required class="w-full px-3.5 py-2 bg-[#0b1325] border border-slate-800 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-emerald-500">
+                </div>
+                <div class="sm:col-span-3">
+                  <label for="newDebtAmount" class="block text-[11px] font-semibold text-slate-400 mb-1">Valor</label>
+                  <div class="relative">
+                    <span class="absolute left-2.5 top-2 text-xs sm:text-sm text-slate-500 font-bold">R$</span>
+                    <input type="number" id="newDebtAmount" placeholder="300" min="10" step="10" required class="w-full pl-8 pr-2 py-2 bg-[#0b1325] border border-slate-800 rounded-xl text-white text-xs sm:text-sm focus:outline-none focus:border-emerald-500">
+                  </div>
+                </div>
+                <div class="sm:col-span-3 flex items-end">
+                  <button type="submit" class="w-full py-2 px-3 bg-[#10b981] hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm rounded-xl transition-all shadow-md shadow-emerald-500/20 flex items-center justify-center gap-1 cursor-pointer h-[38px]">
+                    <i class="fa-solid fa-plus text-xs"></i>
+                    <span>Adicionar</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <!-- Coluna 2: Projeção de Quitação (50% da largura - igualada) -->
+          <div class="lg:col-span-6 bg-[#080d19]/90 p-5 sm:p-7 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-5">
+            
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <h3 class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+                  <i class="fa-solid fa-chart-line text-emerald-400"></i> Projeção de Quitação
+                </h3>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-300 font-semibold border border-emerald-800">
+                  Calculado
+                </span>
+              </div>
+
+              <div class="space-y-3 text-sm sm:text-base">
+                <div class="flex justify-between items-baseline border-b border-slate-800/80 pb-2.5">
+                  <span class="text-slate-300">Total estimado das dívidas:</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white" id="outTotalDebt">R$ 1.850,00</span>
+                </div>
+                
+                <div class="flex justify-between items-baseline border-b border-slate-800/80 pb-2.5">
+                  <span class="text-slate-300">Primeira conta eliminada:</span>
+                  <span class="text-sm sm:text-base font-bold text-emerald-400" id="outFirstDebtWin">No 1º mês!</span>
+                </div>
+
+                <div class="flex justify-between items-baseline border-b border-slate-800/80 pb-2.5">
+                  <span class="text-slate-300">Tempo estimado para quitar tudo:</span>
+                  <span class="text-base sm:text-lg font-bold text-white" id="outTotalMonths">Aprox. 6 meses</span>
+                </div>
+              </div>
+
+              <div class="space-y-2 pt-1">
+                <div class="flex justify-between items-center text-xs sm:text-sm text-slate-200 font-semibold">
+                  <span>Ordem sugerida de quitação:</span>
+                  <span class="text-emerald-400 font-bold" id="snowballSummaryBadge">3 etapas</span>
+                </div>
+
+                <div class="space-y-2 text-xs sm:text-sm" id="snowballTimelineContainer"></div>
+              </div>
+            </div>
+
+            <div class="space-y-3.5 pt-2 mt-auto">
+              <!-- Caixa explicativa Poder da Bola de Neve -->
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs sm:text-sm text-slate-200 space-y-1.5 leading-relaxed" id="snowballExplanationBox"></div>
+
+              <div>
+                <button type="button" onclick="goToLeadFormWithPlan()" class="w-full text-center py-3.5 px-4 rounded-xl bg-[#10b981] hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+                  <span>Quero receber meu plano personalizado</span>
+                  <i class="fa-solid fa-arrow-down text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA: COMO O PRISMA VAI GUIAR VOCÊ -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          Como o PRISMA funciona
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">
+          Sem termos difíceis ou planilhas complicadas. Um caminho simples e direto para organizar seu orçamento.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-[#0b1325] border border-slate-800 p-6 sm:p-7 rounded-2xl space-y-3">
+          <div class="text-emerald-400 font-bold text-xs sm:text-sm uppercase tracking-wider">Passo 1</div>
+          <h3 class="text-lg sm:text-xl font-bold text-white">Mapeamento Simples</h3>
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+            Você cadastra suas contas pendentes de forma totalmente privada. O sistema organiza os valores e prazos sem complicações.
+          </p>
+        </div>
+
+        <div class="bg-[#0b1325] border border-slate-800 p-6 sm:p-7 rounded-2xl space-y-3">
+          <div class="text-emerald-400 font-bold text-xs sm:text-sm uppercase tracking-wider">Passo 2</div>
+          <h3 class="text-lg sm:text-xl font-bold text-white">Pagamento Estratégico</h3>
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+            Priorizamos a eliminação das menores dívidas primeiro. Riscar cada conta da lista traz a motivação necessária para ir até o fim.
+          </p>
+        </div>
+
+        <div class="bg-[#0b1325] border border-slate-800 p-6 sm:p-7 rounded-2xl space-y-3">
+          <div class="text-emerald-400 font-bold text-xs sm:text-sm uppercase tracking-wider">Passo 3</div>
+          <h3 class="text-lg sm:text-xl font-bold text-white">Reconstrução da Reserva</h3>
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+            Com o fim das pendências, orientamos você a formar sua reserva de emergência para proteger seu dinheiro contra novos imprevistos.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CAPTURA LISTA PRIORITÁRIA -->
+    <section id="captura" class="max-w-2xl mx-auto px-4 sm:px-6">
+      <div class="bg-gradient-to-b from-[#091122] to-[#070c18] border-2 border-emerald-500/50 p-6 sm:p-9 rounded-3xl shadow-2xl space-y-5 relative">
+        
+        <div class="text-center space-y-1.5">
+          <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-0.5 rounded-full border border-emerald-800/60">
+            <i class="fa-solid fa-users text-[10px]"></i> GRUPO PILOTO • VAGAS GRATUITAS
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Entre na Lista Prioritária do PRISMA
+          </h2>
+          <p class="text-xs text-slate-300 max-w-md mx-auto">
+            Estamos montando o primeiro grupo fechado de testes. Deixe seu contato para receber acesso gratuito e estruturar seu cronograma personalizado de quitação.
+          </p>
+        </div>
+
+        <!-- Dynamic Simulation Sync Banner (Exatamente igual ao print) -->
+        <div id="simulationSyncBanner" class="p-3 rounded-xl bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 flex items-center gap-2.5 text-xs">
+          <i class="fa-regular fa-bookmark text-emerald-400"></i>
+          <span id="simulationSyncDetails">
+            Plano simulado conectado: <strong>R$ 1.850,00</strong> em 3 dívidas • Quitação prevista em aprox. <strong>6 meses</strong> (R$ 350/mês).
+          </span>
+        </div>
+
+        <!-- Form Element -->
+        <form id="leadCaptureForm" onsubmit="handleLeadSubmit(event)" class="space-y-4">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div>
+              <label for="leadName" class="block text-xs sm:text-sm font-semibold text-slate-200 mb-1">
+                Seu Nome ou Apelido <span class="text-emerald-400">*</span>
+              </label>
+              <input type="text" id="leadName" required placeholder="Como prefere ser chamado(a)" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-white text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500">
+            </div>
+
+            <div>
+              <label for="leadContact" class="block text-xs sm:text-sm font-semibold text-slate-200 mb-1">
+                WhatsApp ou E-mail <span class="text-emerald-400">*</span>
+              </label>
+              <input type="text" id="leadContact" required placeholder="(DDD) 99999-9999 ou seu@email.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-white text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="leadPain" class="block text-xs sm:text-sm font-semibold text-slate-200 mb-1">
+              Qual é o seu maior incômodo financeiro hoje?
+            </label>
+            <select id="leadPain" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500">
+              <option value="Faturas de cartão de crédito e rotativo acumulado">Faturas de cartão de crédito e rotativo acumulado</option>
+              <option value="Dinheiro emprestado com familiares ou amigos">Dinheiro emprestado com familiares ou amigos</option>
+              <option value="Não sei o tamanho exato da minha dívida total">Não sei o tamanho exato da minha dívida total</option>
+              <option value="Perdi minha reserva de emergência e quero reconstruir" selected>Perdi minha reserva de emergência e quero reconstruir</option>
+              <option value="Apenas quero reorganizar meu salário sem estresse">Apenas quero reorganizar meu salário sem estresse</option>
+            </select>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label for="leadRange" class="block text-xs sm:text-sm font-semibold text-slate-200">
+                Valor aproximado das dívidas a reorganizar:
+              </label>
+              <span class="text-xs text-emerald-400 font-semibold" id="rangeSyncIndicator">
+                Sincronizado com a simulação
+              </span>
+            </div>
+            <select id="leadRange" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700/80 text-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500">
+              <option value="Até R$ 500">Até R$ 500</option>
+              <option value="Entre R$ 500 e R$ 2.000" selected>Entre R$ 500 e R$ 2.000</option>
+              <option value="Entre R$ 2.000 e R$ 5.000">Entre R$ 2.000 e R$ 5.000</option>
+              <option value="Acima de R$ 5.000">Acima de R$ 5.000</option>
+              <option value="Ainda não calculei">Ainda não calculei</option>
+            </select>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" id="submitBtn" class="w-full py-3.5 px-6 rounded-xl font-bold text-sm sm:text-base bg-[#10b981] hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <i class="fa-solid fa-lock text-xs"></i>
+              <span>Garantir Meu Acesso Gratuito</span>
+            </button>
+          </div>
+
+          <div class="flex items-center justify-center gap-1.5 text-xs text-slate-400 pt-1 text-center">
+            <i class="fa-solid fa-shield-halved text-emerald-400 text-xs"></i>
+            <span>Seus dados são confidenciais e protegidos conforme a LGPD.</span>
+          </div>
+
+        </form>
+
+        <!-- Mensagem de Confirmação Dinâmica -->
+        <div id="captureSuccessBox" class="hidden p-6 rounded-2xl bg-emerald-950/90 border border-emerald-500 text-center space-y-3">
+          <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto text-lg">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Vaga Reservada com Sucesso!</h3>
+          <p class="text-xs text-slate-300 max-w-md mx-auto" id="successCustomMsg">
+            Suas informações foram salvas em segurança. Entraremos em contato com você em breve para liberar o acesso prioritário.
+          </p>
+          <div class="pt-2">
+            <button onclick="resetCaptureForm()" class="text-xs text-emerald-400 underline hover:text-emerald-300">
+              Registrar outra resposta
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Perguntas Frequentes</h2>
+        <p class="text-sm sm:text-base text-slate-400">Dúvidas comuns sobre o método e segurança</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-[#0b1325] border border-slate-800 p-5 sm:p-6 rounded-2xl space-y-2">
+          <div class="text-base sm:text-lg font-bold text-white flex items-center gap-2.5">
+            <i class="fa-regular fa-circle-question text-emerald-400 text-lg"></i>
+            <span>O PRISMA é ligado a bancos ou plataformas de aposta?</span>
+          </div>
+          <p class="text-sm sm:text-base text-slate-200 pl-7 sm:pl-8 leading-relaxed">
+            Não. Somos uma iniciativa independente de tecnologia e reeducação orçamentária. Não recebemos comissões de casas de apostas nem cobramos taxas ocultas.
+          </p>
+        </div>
+
+        <div class="bg-[#0b1325] border border-slate-800 p-5 sm:p-6 rounded-2xl space-y-2">
+          <div class="text-base sm:text-lg font-bold text-white flex items-center gap-2.5">
+            <i class="fa-regular fa-circle-question text-emerald-400 text-lg"></i>
+            <span>Por que usar o método bola de neve em vez de pagar os maiores juros?</span>
+          </div>
+          <p class="text-sm sm:text-base text-slate-200 pl-7 sm:pl-8 leading-relaxed">
+            A partir das entrevistas e questionários aplicados com utilizadores reais, identificou-se que as perdas financeiras ocorrem de forma fragmentada e descontrolada, levando ao esgotamento de reservas de emergência, cartões estourados e dívidas com terceiros. Para responder a essa desorganização, o PRISMA propõe um roteiro prático que ordena os débitos por urgência e menor valor, permitindo recuperar a previsibilidade do orçamento passo a passo.
+          </p>
+        </div>
+
+        <div class="bg-[#0b1325] border border-slate-800 p-5 sm:p-6 rounded-2xl space-y-2">
+          <div class="text-base sm:text-lg font-bold text-white flex items-center gap-2.5">
+            <i class="fa-regular fa-circle-question text-emerald-400 text-lg"></i>
+            <span>Quanto custa para participar do grupo piloto?</span>
+          </div>
+          <p class="text-sm sm:text-base text-slate-200 pl-7 sm:pl-8 leading-relaxed">
+            O acesso durante a fase de validação e lançamento do MVP é 100% gratuito para os primeiros cadastrados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#050811] border-t border-slate-800/80 py-8 px-4 sm:px-6 text-xs sm:text-sm text-slate-400">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center space-x-2">
+        <div class="w-6 h-6 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">
+          <i class="fa-solid fa-shapes"></i>
+        </div>
+        <span class="font-bold text-slate-200">PRISMA — Reabilitação Orçamentária</span>
+      </div>
+      <div>
+        Projeto Acadêmico • Ciência da Computação (8º Semestre) • Marília/SP
+      </div>
+      <div class="text-slate-400">
+        Iniciativa Sebrae Supernova • Outubro/2026
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // CONFIGURAÇÃO OFICIAL DO GOOGLE FORMS DA EQUIPE PRISMA
+    // =========================================================================
+    const EQUIPE_GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdGiKslPwfItXcsmuvMooRMqHOG0qLsgTV1a5hx9v6AAFVQ7A/formResponse";
+
+    const GOOGLE_FORM_ENTRY_IDS = {
+      name: "entry.842779187",      // Seu Nome ou Apelido
+      contact: "entry.378386050",   // WhatsApp ou E-mail para contato
+      pain: "entry.1674376151",     // Qual é o seu maior incômodo financeiro hoje?
+      range: "entry.1968332109",    // Faixa aproximada do passivo que precisa ser organizado:
+      planSummary: "entry.965536898" // Resumo do Plano Simulado
+    };
+
+    let capturedLeads = JSON.parse(localStorage.getItem('prisma_leads_local') || '[]');
+
+    // =========================================================================
+    // ESTADO E LÓGICA DO SIMULADOR (Inicia idêntico ao print: R$ 1.850,00)
+    // =========================================================================
+    let simulatorDebts = [
+      { id: 1, name: "Empréstimo com amigo", amount: 200, icon: "fa-user-group", color: "text-purple-400" },
+      { id: 2, name: "Fatura de cartão (parcela)", amount: 450, icon: "fa-credit-card", color: "text-blue-400" },
+      { id: 3, name: "Cheque especial / rotativo", amount: 1200, icon: "fa-receipt", color: "text-amber-400" }
+    ];
+
+    const presetsData = {
+      leve: [
+        { id: 1, name: "Microdébito com conhecido", amount: 150, icon: "fa-user-group", color: "text-purple-400" },
+        { id: 2, name: "Fatura cartão rotativo", amount: 500, icon: "fa-credit-card", color: "text-blue-400" }
+      ],
+      medio: [
+        { id: 1, name: "Empréstimo com amigo", amount: 200, icon: "fa-user-group", color: "text-purple-400" },
+        { id: 2, name: "Fatura de cartão (parcela)", amount: 450, icon: "fa-credit-card", color: "text-blue-400" },
+        { id: 3, name: "Cheque especial / rotativo", amount: 1200, icon: "fa-receipt", color: "text-amber-400" }
+      ],
+      pesado: [
+        { id: 1, name: "Empréstimo pessoal urgente", amount: 600, icon: "fa-handshake-angle", color: "text-purple-400" },
+        { id: 2, name: "Cartão de Crédito 1", amount: 1500, icon: "fa-credit-card", color: "text-blue-400" },
+        { id: 3, name: "Cartão de Crédito 2", amount: 2500, icon: "fa-receipt", color: "text-red-400" }
+      ]
+    };
+
+    function syncBudgetFromRange(val) {
+      document.getElementById('simMonthlyBudget').value = val;
+      document.getElementById('displayBudgetValue').innerText = `R$ ${parseFloat(val).toLocaleString('pt-BR')} / mês`;
+      renderSimulator();
+    }
+
+    function syncBudgetFromInput(val) {
+      const num = Math.max(10, parseFloat(val) || 50);
+      document.getElementById('simMonthlyBudgetRange').value = Math.min(2000, num);
+      document.getElementById('displayBudgetValue').innerText = `R$ ${num.toLocaleString('pt-BR')} / mês`;
+      renderSimulator();
+    }
+
+    function loadSimulatorPreset(type) {
+      if (presetsData[type]) {
+        simulatorDebts = JSON.parse(JSON.stringify(presetsData[type]));
+        renderSimulator();
+      }
+    }
+
+    function removeDebt(id) {
+      simulatorDebts = simulatorDebts.filter(d => d.id !== id);
+      renderSimulator();
+    }
+
+    function handleAddDebt(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('newDebtName');
+      const amountInput = document.getElementById('newDebtAmount');
+
+      const name = nameInput.value.trim();
+      const amount = parseFloat(amountInput.value);
+
+      if (!name || isNaN(amount) || amount <= 0) return;
+
+      simulatorDebts.push({
+        id: Date.now(),
+        name: name,
+        amount: amount,
+        icon: "fa-receipt",
+        color: "text-teal-400"
+      });
+
+      nameInput.value = '';
+      amountInput.value = '';
+      renderSimulator();
+    }
+
+    // Sincronização automática com a Lista Prioritária
+    function syncSimulationWithLeadForm() {
+      const totalDebt = simulatorDebts.reduce((acc, curr) => acc + curr.amount, 0);
+      const monthlyBudget = parseFloat(document.getElementById('simMonthlyBudget').value) || 350;
+      const rangeSelect = document.getElementById('leadRange');
+      const syncBanner = document.getElementById('simulationSyncBanner');
+      const syncDetails = document.getElementById('simulationSyncDetails');
+
+      if (!rangeSelect) return;
+
+      if (totalDebt <= 0) {
+        rangeSelect.value = "Ainda não calculei";
+      } else if (totalDebt <= 500) {
+        rangeSelect.value = "Até R$ 500 (micro-perdas acumuladas)";
+      } else if (totalDebt <= 2000) {
+        rangeSelect.value = "Entre R$ 500 e R$ 2.000";
+      } else if (totalDebt <= 5000) {
+        rangeSelect.value = "Entre R$ 2.000 e R$ 5.000";
+      } else {
+        rangeSelect.value = "Acima de R$ 5.000";
+      }
+
+      if (syncBanner && syncDetails) {
+        if (totalDebt > 0) {
+          const months = Math.ceil(totalDebt / monthlyBudget);
+          syncDetails.innerHTML = `
+            Plano simulado conectado: <strong>R$ ${totalDebt.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong> em ${simulatorDebts.length} dívidas • Quitação prevista em aprox. <strong>${months} meses</strong> (R$ ${monthlyBudget}/mês).
+          `;
+          syncBanner.classList.remove('hidden');
+        } else {
+          syncBanner.classList.add('hidden');
+        }
+      }
+    }
+
+    function goToLeadFormWithPlan() {
+      syncSimulationWithLeadForm();
+      const capturaSec = document.getElementById('captura');
+      if (capturaSec) {
+        capturaSec.scrollIntoView({ behavior: 'smooth' });
+      }
+      setTimeout(() => {
+        const nameInput = document.getElementById('leadName');
+        if (nameInput) nameInput.focus();
+      }, 500);
+    }
+
+    function renderSimulator() {
+      simulatorDebts.sort((a, b) => a.amount - b.amount);
+
+      const listContainer = document.getElementById('debtsListContainer');
+      const countLabel = document.getElementById('debtsCount');
+      if (countLabel) countLabel.innerText = simulatorDebts.length;
+
+      if (simulatorDebts.length === 0) {
+        listContainer.innerHTML = `
+          <div class="p-4 rounded-xl bg-slate-950 text-center text-xs text-slate-400 border border-dashed border-slate-800">
+            Nenhuma dívida cadastrada. Adicione uma conta abaixo para simular.
+          </div>
+        `;
+      } else {
+        listContainer.innerHTML = simulatorDebts.map((debt, index) => `
+          <div class="flex items-center justify-between p-2 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="flex items-center gap-2 overflow-hidden">
+              <span class="text-[11px] font-bold text-slate-500 shrink-0">#${index + 1}</span>
+              <span class="text-xs text-slate-200 truncate">
+                <i class="fa-solid ${debt.icon || 'fa-receipt'} ${debt.color || 'text-slate-400'} mr-1.5 text-[11px]"></i>
+                ${escapeHtml(debt.name)}
+              </span>
+            </div>
+            <div class="flex items-center gap-2.5 shrink-0">
+              <span class="text-xs font-bold text-white">R$ ${debt.amount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+              <button type="button" onclick="removeDebt(${debt.id})" class="text-slate-500 hover:text-red-400 transition-colors text-xs p-1" title="Excluir">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      const monthlyBudget = parseFloat(document.getElementById('simMonthlyBudget').value) || 350;
+      const totalDebt = simulatorDebts.reduce((acc, curr) => acc + curr.amount, 0);
+
+      const outTotal = document.getElementById('outTotalDebt');
+      const outFirst = document.getElementById('outFirstDebtWin');
+      const outMonths = document.getElementById('outTotalMonths');
+      const timelineContainer = document.getElementById('snowballTimelineContainer');
+      const summaryBadge = document.getElementById('snowballSummaryBadge');
+      const explanationBox = document.getElementById('snowballExplanationBox');
+
+      outTotal.innerText = `R$ ${totalDebt.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+
+      if (simulatorDebts.length === 0 || monthlyBudget <= 0) {
+        outFirst.innerText = "0 meses";
+        outMonths.innerText = "0 meses";
+        timelineContainer.innerHTML = '<span class="text-slate-500 text-xs">Insira contas para ver o roteiro.</span>';
+        summaryBadge.innerText = "0 etapas";
+        explanationBox.innerHTML = '<span class="text-slate-400">Adicione uma dívida para calcular.</span>';
+        syncSimulationWithLeadForm();
+        return;
+      }
+
+      let accumulatedMonths = 0;
+      let stepsHtml = '';
+
+      simulatorDebts.forEach((debt, idx) => {
+        const monthsNeeded = Math.ceil(debt.amount / monthlyBudget);
+        accumulatedMonths += monthsNeeded;
+
+        const isFirst = idx === 0;
+        const badgeClass = isFirst ? 'text-emerald-400 font-bold' : 'text-slate-400 font-semibold';
+
+        stepsHtml += `
+          <div class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+            <div class="flex items-center gap-2.5 truncate">
+              <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0">
+                ${idx + 1}
+              </span>
+              <span class="text-xs sm:text-sm text-slate-200 font-medium truncate">${escapeHtml(debt.name)}</span>
+            </div>
+            <span class="text-xs sm:text-sm ${badgeClass} shrink-0">
+              ${accumulatedMonths <= 1 ? 'Mês 1' : `Mês ${accumulatedMonths}`}
+            </span>
+          </div>
+        `;
+      });
+
+      timelineContainer.innerHTML = stepsHtml;
+      summaryBadge.innerText = `${simulatorDebts.length} etapas`;
+
+      const firstDebt = simulatorDebts[0];
+      if (monthlyBudget >= firstDebt.amount) {
+        outFirst.innerText = "Logo no 1º mês!";
+      } else {
+        const m = Math.ceil(firstDebt.amount / monthlyBudget);
+        outFirst.innerText = `Em ${m} ${m === 1 ? 'mês' : 'meses'}`;
+      }
+
+      const totalEstimatedMonths = Math.ceil(totalDebt / monthlyBudget);
+      outMonths.innerText = `Aprox. ${totalEstimatedMonths} meses`;
+
+      const firstAmountFormatted = `R$ ${firstDebt.amount.toLocaleString('pt-BR', { minimumFractionDigits: 0 })}`;
+      explanationBox.innerHTML = `
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs"></i>
+          <div>
+            <strong class="text-white">Como funciona:</strong> Ao pagar a conta de <strong class="text-white">${firstAmountFormatted}</strong> primeiro, você elimina uma cobrança e foca seus <strong>R$ ${monthlyBudget}</strong> para quitar as próximas pendências de forma organizada.
+          </div>
+        </div>
+      `;
+
+      syncSimulationWithLeadForm();
+    }
+
+    // =========================================================================
+    // ENVIO SILENCIOSO PARA GOOGLE FORMS E SALVAMENTO LOCAL
+    // =========================================================================
+    async function handleLeadSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('leadName').value.trim();
+      const contact = document.getElementById('leadContact').value.trim();
+      const pain = document.getElementById('leadPain').value;
+      const range = document.getElementById('leadRange').value;
+
+      const submitBtn = document.getElementById('submitBtn');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Conectando...';
+
+      const totalSimulado = simulatorDebts.reduce((acc, curr) => acc + curr.amount, 0);
+      const orcamentoSimulado = parseFloat(document.getElementById('simMonthlyBudget').value) || 350;
+
+      let planoResumoTexto = "Simulação padrão PRISMA.";
+      if (totalSimulado > 0 && simulatorDebts.length > 0) {
+        const mesesEstimados = Math.ceil(totalSimulado / orcamentoSimulado);
+        const listaContas = simulatorDebts.map((d, i) => `#${i + 1} ${d.name}: R$ ${d.amount.toLocaleString('pt-BR')}`).join(' | ');
+        planoResumoTexto = `Total: R$ ${totalSimulado.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} em ${simulatorDebts.length} dívidas. Parcela: R$ ${orcamentoSimulado}/mês. Estimativa: ${mesesEstimados} meses. Itens: [${listaContas}]`;
+      }
+
+      // 1. Armazena localmente
+      const leadData = {
+        nome: name,
+        contato: contact,
+        dor: pain,
+        faixa: range,
+        resumoPlano: planoResumoTexto,
+        data: new Date().toISOString()
+      };
+      capturedLeads.push(leadData);
+      localStorage.setItem('prisma_leads_local', JSON.stringify(capturedLeads));
+
+      // 2. Disparo silencioso para Google Forms
+      try {
+        const postParams = new URLSearchParams();
+        postParams.append('fvv', '1');
+        postParams.append('pageHistory', '0');
+
+        postParams.append(GOOGLE_FORM_ENTRY_IDS.name, name);
+        postParams.append(GOOGLE_FORM_ENTRY_IDS.contact, contact);
+        postParams.append(GOOGLE_FORM_ENTRY_IDS.pain, pain);
+        postParams.append(GOOGLE_FORM_ENTRY_IDS.range, range);
+        postParams.append(GOOGLE_FORM_ENTRY_IDS.planSummary, planoResumoTexto);
+
+        await fetch(EQUIPE_GOOGLE_FORM_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: postParams.toString()
+        });
+      } catch (err) {
+        console.warn("Envio registrado com sucesso localmente.", err);
+      }
+
+      // 3. Feedback visual
+      document.getElementById('leadCaptureForm').classList.add('hidden');
+      const successBox = document.getElementById('captureSuccessBox');
+      document.getElementById('successCustomMsg').innerHTML = `
+        Tudo certo, <strong>${escapeHtml(name)}</strong>! Seu plano simulado (R$ ${totalSimulado.toLocaleString('pt-BR', {minimumFractionDigits: 2})}) foi associado ao seu cadastro. Entraremos em contato pelo <strong>${escapeHtml(contact)}</strong> para liberar seu acesso piloto.
+      `;
+      successBox.classList.remove('hidden');
+
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+
+    function resetCaptureForm() {
+      document.getElementById('leadCaptureForm').reset();
+      document.getElementById('leadCaptureForm').classList.remove('hidden');
+      document.getElementById('captureSuccessBox').classList.add('hidden');
+      syncSimulationWithLeadForm();
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>"']/g, function(m) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#039;'
+        }[m];
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderSimulator();
+    });
+  </script>
+</body>
+</html>

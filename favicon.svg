@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="prismaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1325" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base Background Box -->
+  <rect width="100" height="100" rx="28" fill="url(#bgGradient)" stroke="#1e293b" stroke-width="3" />
+  
+  <!-- Geometric Prism Shapes (PRISMA Icon) -->
+  <g transform="translate(50, 50)">
+    <!-- Main Top Diamond Triangle -->
+    <polygon points="0,-28 26,0 0,28 -26,0" fill="url(#prismaGradient)" />
+    <!-- Left Facet Accent -->
+    <polygon points="0,-28 -26,0 0,0" fill="#ffffff" opacity="0.25" />
+    <!-- Bottom Right Facet Accent -->
+    <polygon points="0,0 26,0 0,28" fill="#065f46" opacity="0.4" />
+  </g>
+</svg>
